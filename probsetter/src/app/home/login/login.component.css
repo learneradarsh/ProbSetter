@@ -1,0 +1,70 @@
+  /*.example-card {
+    max-width: 400px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+
+
+latest*/
+.form-container {
+  background:white;
+  padding:3em;
+  width:350px;
+  position:relative;
+  left:37%;
+}
+
+ #lock {
+    width:20%;
+    margin: 1em auto 2em auto;
+    display:block;
+}
+
+#fb {
+    background:#3B5998 url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Facebook_Circle.svg/120px-Facebook_Circle.svg.png') no-repeat 14px 6px;
+    background-size: 20px;
+    color:#fff;
+}
+
+#google {
+    border: 1px solid #95989A;
+    background: #fff  url('https://image.flaticon.com/teams/slug/google.jpg') no-repeat 25px;
+    background-size: 20px;
+}
+
+#email {
+    background: #ECECEC  url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Gmail_Icon.svg/500px-Gmail_Icon.svg.png') no-repeat 25px;
+    background-size: 20px;
+}
+
+@media (max-width: 600px) {
+    #page {
+        padding:1em;
+    }
+    #toolbar {
+        width:80%;
+        
+    }
+    #fb {
+        background:#3B5998;
+    }
+
+    #google {
+        background: #fff;
+    }
+
+    #email {
+        background: #ECECEC;
+    }
+    .form-container {
+      background:white;
+      padding:0.6em;
+      width:80%;
+      position:relative;
+       margin-left:-30%; 
+
+    }
+}
