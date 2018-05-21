@@ -33,7 +33,7 @@ import { PanelsComponent } from './dashboard/component/panels/panels.component';
 import { SettingsService } from './services/settings.service';
 import { WizardComponent } from './dashboard/component/wizard/wizard.component';
 import { AddProblemComponent } from './dashboard/add-problem/add-problem.component';
-
+import {MatSelectModule} from '@angular/material/select';
 @NgModule({
   declarations: [
     AppComponent,
@@ -73,7 +73,8 @@ import { AddProblemComponent } from './dashboard/add-problem/add-problem.compone
     ReactiveFormsModule,
     NgxEditorModule,
     CKEditorModule,
-    EditorModule
+    EditorModule,
+    MatSelectModule
   ],
   providers: [SettingsService],
   bootstrap: [AppComponent]

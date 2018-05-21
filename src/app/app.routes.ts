@@ -18,7 +18,7 @@ import { LockComponent } from './page/lock/lock.component';
 import { RegisterComponent } from './page/register/register.component';
 import { AddProblemComponent } from './dashboard/add-problem/add-problem.component';
 const routes: Routes = [
-  {path: '', component: LoginComponent},
+  {path: 'login', component: LoginComponent},
   {path: 'lock', component: LockComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'dashboard', component: RootComponent, children: [

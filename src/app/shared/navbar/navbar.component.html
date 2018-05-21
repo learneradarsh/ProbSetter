@@ -9,9 +9,9 @@
         <input matInput type="search" placeholder="Search">
       </mat-input-container>
       <button mat-mini-fab class="search-btn"><i class="material-icons" style="font-size:18px;">search</i></button>
-      <button mat-icon-button><i class="material-icons icon-btn">dashboard</i></button>
+      <button mat-icon-button routerLink="/dashboard"><i class="material-icons icon-btn">dashboard</i></button>
       <app-msgiconbtn icon="notifications" number="5" [matMenuTriggerFor]="menu"></app-msgiconbtn>
-      <button mat-icon-button><i class="material-icons icon-btn">person</i></button>
+      <button mat-icon-button routerLink="/dashboard/profile"><i class="material-icons icon-btn">person</i></button>
       <mat-menu #menu="matMenu">
         <button mat-menu-item>Mike John responded to your email</button>
         <button mat-menu-item>You have 5 new tasks</button>

@@ -3,38 +3,42 @@
   <div class="row" style="margin-top: 30px">
 <div class="col-sm-8" >
 
-  <form>
+  <form [formGroup]='addProblem'>
     <div class="form-group">
       <h4><b>Problem Name</b></h4>
-      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Problem Name">
+
+      <mat-input-container>
+      <input matInput class="ip" type="text" [(ngModel)]="problemName"  formControlName='pName' placeholder="Problem Name">
+      </mat-input-container>
+      <div *ngIf="addProblem.controls['pName'].touched && !addProblem.controls['pName'].valid">  
+        <span *ngIf="addProblem.controls['pName'].hasError('required') ">  
+          <div class="alert alert-warning">
+            <button class="close" type="button" data-dismiss="alert" aria-label="Close"><i class="material-icons">close</i></button>
+            <span>Name Required</span>
+          </div>
+        </span>  
+    </div>  
+
     </div>
     <div class="form-group">
       <h4><b>Problem Statement</b></h4>
-    <ckeditor
-      [(ngModel)]="ckeditorContent"
-      [config]="{'uiColor': '#CCEAEE'}"
-      [readonly]="false"
-      (change)="onChange($event)"
-      (editorChange)="onEditorChange($event)" 
-      (ready)="onReady($event)"
-      (focus)="onFocus($event)"
-      (blur)="onBlur($event)"
-      (contentDom)="onContentDom($event)"
-      (fileUploadRequest)="onFileUploadRequest($event)"
-      debounce="500">
-    </ckeditor>
- 
+    <ckeditor   formControlName='pStatement'  debounce="500"> </ckeditor>
+    <div *ngIf="addProblem.controls['pStatement'].touched && !addProblem.controls['pStatement'].valid">  
+      <span *ngIf="addProblem.controls['pStatement'].hasError('required') ">  
+        <div class="alert alert-warning">
+          <button class="close" type="button" data-dismiss="alert" aria-label="Close"><i class="material-icons">close</i></button>
+          <span>Problem Statement Required</span>
+        </div>
+      </span>  
+  </div>  
     </div>
-    <div class="form-group">
-      <h4 style="margin-bottom: 5px;"><b>Diificulty Level</b></h4><br>
-      <div id="mainselection">
-      <select>
-        <option selected="selected" disabled>Select Option</option>
-        <option value="easy">Easy</option>
-        <option value="medium">Medium</option>
-        <option value="hard">Hard</option>
-      </select></div>
-    </div>
+    <mat-form-field>
+      <mat-select placeholder="Difficulty Level">
+        <mat-option *ngFor="let level of Levels" [value]="level.value">
+          {{ level.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
     <div class="form-group">
       <h4><b>Input/Output File</b></h4>
       <table>
@@ -65,30 +69,43 @@
           </tfoot>
       </table>
       <h4>Editorial</h4>
-      <ckeditor>    </ckeditor>
+      <ckeditor   formControlName='pEditorial' >    </ckeditor>
+      <div *ngIf="addProblem.controls['pEditorial'].touched && !addProblem.controls['pEditorial'].valid">  
+        <span *ngIf="addProblem.controls['pEditorial'].hasError('required') ">  
+          <div class="alert alert-warning">
+            <button class="close" type="button" data-dismiss="alert" aria-label="Close"><i class="material-icons">close</i></button>
+            <span>Problem Editorial Required</span>
+          </div>
+        </span>  
+    </div> 
       <h4> <b>Solution</b> </h4>
-      <div id="mainselection">
-      <select>
-        <option selected="selected" disabled>Select Language</option>
-        <option value="c">C</option>
-        <option value="cpp">CPP</option>
-        <option value="python">PYTHON</option>
-        <option value="java">JAVA</option>
-      </select></div>
-      <ckeditor [config]="config">    </ckeditor>
+
+      <mat-form-field>
+        <mat-select placeholder="Select Language">
+          <mat-option *ngFor="let lang of Language" [value]="lang.value">
+            {{ lang.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      
+      <ckeditor   formControlName='pSolution' [config]="config">    </ckeditor>
+      <div *ngIf="addProblem.controls['pSolution'].touched && !addProblem.controls['pSolution'].valid">  
+        <span *ngIf="addProblem.controls['pSolution'].hasError('required') ">  
+          <div class="alert alert-warning">
+            <button class="close" type="button" data-dismiss="alert" aria-label="Close"><i class="material-icons">close</i></button>
+            <span>Problem Solution Required</span>
+          </div>
+        </span>  
+    </div> 
     </div>
 
-
-
-
-
-    <button type="submit" class="btn btn-success">Submit</button>
+    <button type="submit" mat-button class="btn btn-success">Submit</button>
   </form>
   
   
 </div>
 <div class="col-sm-4">
-hii
+
 </div>
 
 
