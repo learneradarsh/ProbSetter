@@ -3,7 +3,7 @@
   position: relative;
   z-index: 1;
 }
-
+.bg{background-color:#F5F5F5 }
 .card{
   position: relative;
   padding: 20px;
@@ -24,6 +24,7 @@
   -moz-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
+  box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px #cbcdce;
 }
 
 @-webkit-keyframes card {
@@ -43,8 +44,8 @@
   width: 100%;
   padding: 25px;
   border-radius: 3px;
-  background: linear-gradient(60deg, #ec407a, #d81b60);
-  box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(233, 30, 99, 0.4);
+  background: linear-gradient(60deg, #3a8ad5, #1960c1);
+  box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px #2d6fad;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -97,5 +98,5 @@
 }
 
 .card-footer button{
-  color: #e91e63;
+  color: #1960c1;
 }

@@ -24,13 +24,18 @@
     "@angular/platform-browser-dynamic": "^5.2.6",
     "@angular/router": "^5.2.6",
     "@tinymce/tinymce-angular": "^2.0.0",
+    "@types/jquery": "^3.3.2",
+    "angular-bootstrap-md": "^6.1.1",
     "angular-material": "^1.1.9",
+    "angular2-useful-swiper": "^5.0.1",
     "core-js": "^2.4.1",
     "hammerjs": "^2.0.8",
+    "jquery": "^3.3.1",
     "ng2-ckeditor": "^1.2.0",
     "ngx-bootstrap": "^2.0.5",
     "ngx-editor": "^3.3.0",
     "rxjs": "^5.1.0",
+    "swiper": "^3.4.2",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {

@@ -1,12 +1,11 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
-declare const $: any;
 
 @Component({
-  selector: 'app-wizard',
-  templateUrl: './wizard.component.html',
-  styleUrls: ['./wizard.component.css']
+  selector: 'app-wallet',
+  templateUrl: './wallet.component.html',
+  styleUrls: ['./wallet.component.css']
 })
-export class WizardComponent implements OnInit, AfterViewInit {
+export class WalletComponent implements OnInit, AfterViewInit {
   tabIndex = 0;
   constructor() { }
 
@@ -77,14 +76,15 @@ export class WizardComponent implements OnInit, AfterViewInit {
       this.tabIndex++;
       moveTab.style.left = screenWidth > 990 ? '20vw' : '30vw';
       preBtn.style.visibility = 'visible';
-      moveTab.innerHTML = 'Account';
+      moveTab.innerHTML = 'Personal Info';
     } else if (this.tabIndex === 1) {
       this.tabIndex++;
       moveTab.style.left = screenWidth > 990 ? '42vw' : '61.5vw';
       nextBtn.style.visibility = 'hidden';
-      moveTab.innerHTML = 'Address';
+      moveTab.innerHTML = 'Redeem';
     }
     (<HTMLElement>tabs[this.tabIndex]).style.display = 'inherit';
   }
+
 
 }

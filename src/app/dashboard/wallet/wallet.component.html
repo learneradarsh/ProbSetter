@@ -1,0 +1,84 @@
+<div class="container">
+    <app-navbar title="Wizard"></app-navbar>
+    <div class="row page-title">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="wizard-panel card">
+          <div class="wizard-header">
+            <h3 class="text-center">Get your money</h3>
+            <h5 class="text-center" style="margin-top: 5px; padding: 0 20px;">Redeem your wallet balance.</h5>
+          </div>
+          <div class="wizard-navigation">
+            <ul class="nav nav-pills">
+              <li class="text-uppercase text-center">Score</li>
+              <li class="text-uppercase text-center">Personal Info</li>
+              <li class="text-uppercase text-center">Redeem</li>
+            </ul>
+            <div class="move-tab text-center text-uppercase">About</div>
+          </div>
+          <div class="wizard-body">
+            <div class="wizard-tab">
+              <div class="row wallet-section">
+                  <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wlbg">
+                      <app-figurecard
+                        title="+245"
+                        headerIcon="account_balance_wallet"
+                        category="ProbSetter Score"
+                        footContent="Just Updated"
+                        footerIcon="update"
+                        linearColor="linear-gradient(60deg, #66bb6a, #43a047)"
+                        boxShadow="0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(0, 188, 212, 0.4)">
+                      </app-figurecard>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                      <img style="width: 100px;margin-top: 45px;margin-left: 25px;"src="../../../assets/img/arrow.png" alt="">
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wlbg">
+                        <app-figurecard
+                          title="$100"
+                          headerIcon="attach_money"
+                          category="ProbSetter Score"
+                          footContent="Just Updated"
+                          footerIcon="update"
+                          linearColor="linear-gradient(60deg, #66bb6a, #43a047)"
+                          boxShadow="0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(0, 188, 212, 0.4)">
+                        </app-figurecard>
+                      </div>
+
+              </div>
+            </div>
+            <div class="wizard-tab">
+              
+                <form class="example-form">
+                    <table class="example-full-width" cellspacing="0"><tr>
+                      <td><mat-form-field class="example-full-width">
+                        <input matInput placeholder="First name">
+                      </mat-form-field></td>&nbsp;
+                      <td><mat-form-field class="example-full-width">
+                        <input matInput placeholder="Last Name">
+                      </mat-form-field></td>
+                    </tr></table>
+                  
+                    <p>
+                      <mat-form-field class="example-full-width">
+                        <textarea matInput placeholder="Address"></textarea>
+                      </mat-form-field>
+                    </p>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Phone Number">
+                    </mat-form-field>
+
+                  </form>
+            </div>
+            <div class="wizard-tab">
+              tab 3
+            </div>
+          </div>
+          <div class="wizard-footer">
+            <button id="preBtn" class="btn btn-danger" (click)="preOnClick()">Previous</button>
+            <button id="nextBtn" class="btn btn-success" (click)="nextOnClick()">Next</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

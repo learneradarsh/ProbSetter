@@ -4,8 +4,8 @@
   z-index: 1;
 }
 
-.background {
-  background: url("../../../assets/img/register_bg.jpg") center center;
+.bg {
+  background-color: #F5F5F5;
   background-size: cover;
 }
 
@@ -83,3 +83,4 @@
 .form-part .row button{
   margin-top: 15px;
 }
+.btn-reg{background: linear-gradient(60deg, #3a8ad5, #1960c1);color: white;}

@@ -29,11 +29,19 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { SettingsComponent } from './dashboard/settings/settings.component';
 import { PriceTableComponent } from './dashboard/component/pricetable/pricetable.component';
 import { PanelsComponent } from './dashboard/component/panels/panels.component';
-
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { SettingsService } from './services/settings.service';
 import { WizardComponent } from './dashboard/component/wizard/wizard.component';
 import { AddProblemComponent } from './dashboard/add-problem/add-problem.component';
 import {MatSelectModule} from '@angular/material/select';
+import { MainPageComponent } from './page/main-page/main-page.component';
+import { ForBussinessComponent } from './pages/for-bussiness/for-bussiness.component';
+import { SwiperModule } from 'angular2-useful-swiper';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatTabsModule} from '@angular/material/tabs';
+import { DialogComponent } from './pages/for-bussiness/for-bussiness.component';
+import { PlanComponent } from './pages/plan/plan.component';
+import { WalletComponent } from './dashboard/wallet/wallet.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,7 +65,12 @@ import {MatSelectModule} from '@angular/material/select';
     PriceTableComponent,
     PanelsComponent,
     WizardComponent,
-    AddProblemComponent
+    AddProblemComponent,
+    MainPageComponent,
+    ForBussinessComponent,
+    DialogComponent,
+    PlanComponent,
+    WalletComponent
   ],
   imports: [
     BrowserModule,
@@ -74,9 +87,16 @@ import {MatSelectModule} from '@angular/material/select';
     NgxEditorModule,
     CKEditorModule,
     EditorModule,
-    MatSelectModule
+    MatSelectModule,
+    MDBBootstrapModule.forRoot(),
+    SwiperModule,
+    MatDialogModule,
+    MatTabsModule
   ],
   providers: [SettingsService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    DialogComponent
+  ]
 })
 export class AppModule { }
