@@ -6,7 +6,6 @@ import { CKEditorModule } from 'ng2-ckeditor';
 import { EditorModule } from '@tinymce/tinymce-angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { routing } from './app.routes';
-import { MatButtonModule, MatRadioModule, MatInputModule, MatMenuModule, MatCheckboxModule } from '@angular/material';
 import { NgxEditorModule } from 'ngx-editor';
  import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -33,15 +32,53 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { SettingsService } from './services/settings.service';
 import { WizardComponent } from './dashboard/component/wizard/wizard.component';
 import { AddProblemComponent } from './dashboard/add-problem/add-problem.component';
-import {MatSelectModule} from '@angular/material/select';
+
 import { MainPageComponent } from './page/main-page/main-page.component';
 import { ForBussinessComponent } from './pages/for-bussiness/for-bussiness.component';
 import { SwiperModule } from 'angular2-useful-swiper';
-import {MatDialogModule} from '@angular/material/dialog';
-import {MatTabsModule} from '@angular/material/tabs';
+
 import { DialogComponent } from './pages/for-bussiness/for-bussiness.component';
 import { PlanComponent } from './pages/plan/plan.component';
 import { WalletComponent } from './dashboard/wallet/wallet.component';
+import { VotingComponent } from './pages/voting/voting.component';
+
+import {MatIcon} from '@angular/material/icon';
+import {
+  MatAutocompleteModule,
+  MatButtonModule,
+  MatButtonToggleModule,
+  MatCardModule,
+  MatCheckboxModule,
+  MatChipsModule,
+  MatDatepickerModule,
+  MatDialogModule,
+  MatDividerModule,
+  MatExpansionModule,
+  MatGridListModule,
+  MatIconModule,
+  MatInputModule,
+  MatListModule,
+  MatMenuModule,
+  MatNativeDateModule,
+  MatPaginatorModule,
+  MatProgressBarModule,
+  MatProgressSpinnerModule,
+  MatRadioModule,
+  MatRippleModule,
+  MatSelectModule,
+  MatSidenavModule,
+  MatSliderModule,
+  MatSlideToggleModule,
+  MatSnackBarModule,
+  MatSortModule,
+  MatStepperModule,
+  MatTableModule,
+  MatTabsModule,
+  MatToolbarModule,
+  MatTooltipModule,
+} from '@angular/material';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -70,7 +107,8 @@ import { WalletComponent } from './dashboard/wallet/wallet.component';
     ForBussinessComponent,
     DialogComponent,
     PlanComponent,
-    WalletComponent
+    WalletComponent,
+    VotingComponent
   ],
   imports: [
     BrowserModule,
@@ -91,7 +129,40 @@ import { WalletComponent } from './dashboard/wallet/wallet.component';
     MDBBootstrapModule.forRoot(),
     SwiperModule,
     MatDialogModule,
-    MatTabsModule
+    MatTabsModule,
+    MatChipsModule,
+    MatAutocompleteModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatChipsModule,
+    MatDatepickerModule,
+    MatDialogModule,
+    MatDividerModule,
+    MatExpansionModule,
+    MatGridListModule,
+    MatIconModule,
+    MatInputModule,
+    MatListModule,
+    MatMenuModule,
+    MatNativeDateModule,
+    MatPaginatorModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatRadioModule,
+    MatRippleModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatSnackBarModule,
+    MatSortModule,
+    MatStepperModule,
+    MatTableModule,
+    MatTabsModule,
+    MatToolbarModule,
+    MatTooltipModule
   ],
   providers: [SettingsService],
   bootstrap: [AppComponent],

@@ -20,13 +20,14 @@ import { RegisterComponent } from './page/register/register.component';
 import { AddProblemComponent } from './dashboard/add-problem/add-problem.component';
 import { MainPageComponent } from './page/main-page/main-page.component';
 import { ForBussinessComponent } from './pages/for-bussiness/for-bussiness.component';
-
+import { VotingComponent } from './pages/voting/voting.component';
 const routes: Routes = [
   {path: '', component: MainPageComponent},
   {path: 'login', component: LoginComponent},
   {path: 'lock', component: LockComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'forBussiness', component: ForBussinessComponent},
+  {path: 'qrating', component: VotingComponent},
   {path: 'dashboard', component: RootComponent, children: [
     {path: '', component: HomeComponent},
     {path: 'addProblem', component: AddProblemComponent},
