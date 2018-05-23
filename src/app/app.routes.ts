@@ -21,6 +21,8 @@ import { AddProblemComponent } from './dashboard/add-problem/add-problem.compone
 import { MainPageComponent } from './page/main-page/main-page.component';
 import { ForBussinessComponent } from './pages/for-bussiness/for-bussiness.component';
 import { VotingComponent } from './pages/voting/voting.component';
+import { QuestionComponent } from './pages/question/question.component';
+import { PlanComponent } from './pages/plan/plan.component';
 const routes: Routes = [
   {path: '', component: MainPageComponent},
   {path: 'login', component: LoginComponent},
@@ -28,6 +30,8 @@ const routes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'forBussiness', component: ForBussinessComponent},
   {path: 'qrating', component: VotingComponent},
+  {path: 'plan', component: PlanComponent},
+  {path: 'question/:data', component: QuestionComponent, data : { data : 'Test Data'}},
   {path: 'dashboard', component: RootComponent, children: [
     {path: '', component: HomeComponent},
     {path: 'addProblem', component: AddProblemComponent},

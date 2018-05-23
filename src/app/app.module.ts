@@ -77,6 +77,7 @@ import {
   MatToolbarModule,
   MatTooltipModule,
 } from '@angular/material';
+import { QuestionComponent } from './pages/question/question.component';
 
 
 @NgModule({
@@ -108,7 +109,8 @@ import {
     DialogComponent,
     PlanComponent,
     WalletComponent,
-    VotingComponent
+    VotingComponent,
+    QuestionComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,15 @@
+bg{
+    background: #ffffff;
+    font-size: 10px;
+    font-family: 'Open Sans',sans-serif;
+    font-family: 'Open Sans',sans-serif;
+    word-spacing: 1px;
+}
+body{ background: #ffffff;}
+
+  
+  .container{
+    height: 100%;
+    position: relative;
+    z-index: 0;
+  }

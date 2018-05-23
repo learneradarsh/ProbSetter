@@ -1,0 +1,9 @@
+.bg{background-color:white; }
+.title {
+    margin: 20px ;font-weight: bolder;
+    text-align: center;
+    font-size:30px;
+}
+.pt{
+    cursor: pointer;
+}

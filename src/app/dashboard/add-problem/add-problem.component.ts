@@ -7,7 +7,7 @@ import {FormGroup, FormControl, FormBuilder, Validators} from '@angular/forms';
 import {MatSelectModule} from '@angular/material/select';
 import {COMMA, ENTER} from '@angular/cdk/keycodes';
 import {MatAutocompleteSelectedEvent, MatChipInputEvent} from '@angular/material';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs/Rx';
 import {map, startWith} from 'rxjs/operators';
 @Component({
   selector: 'app-add-problem',
