@@ -76,12 +76,7 @@ export class WalletComponent implements OnInit, AfterViewInit {
       this.tabIndex++;
       moveTab.style.left = screenWidth > 990 ? '20vw' : '30vw';
       preBtn.style.visibility = 'visible';
-      moveTab.innerHTML = 'Personal Info';
-    } else if (this.tabIndex === 1) {
-      this.tabIndex++;
-      moveTab.style.left = screenWidth > 990 ? '42vw' : '61.5vw';
-      nextBtn.style.visibility = 'hidden';
-      moveTab.innerHTML = 'Redeem';
+      moveTab.innerHTML = 'Account Info';
     }
     (<HTMLElement>tabs[this.tabIndex]).style.display = 'inherit';
   }

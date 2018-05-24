@@ -71,7 +71,8 @@ export class AddProblemComponent implements OnInit {
       pName: ['', [Validators.required]],
       pStatement: ['', [Validators.required]],
       pEditorial: ['', [Validators.required]],
-      pSolution: ['', [Validators.required]]
+      pSolution: ['', [Validators.required]],
+      pExplanation: ['', [Validators.required]]
     });
 }
 

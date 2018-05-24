@@ -32,43 +32,57 @@
       </span>  
   </div>  
     </div>
-    <mat-form-field>
-      <mat-select placeholder="Difficulty Level">
-        <mat-option *ngFor="let level of Levels" [value]="level.value">
-          {{ level.viewValue }}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
-    <div class="form-group">
-      <h4><b>Input/Output File</b></h4>
-      <table>
-        <thead>
-        <tr>
-           <th width="40%">Input</th><th width="40%">Output</th><th width="20%"></th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr>
-              <td width="40%"> dbgnf</td>
-              <td width="40%"> dbgnf</td>
-              <td width="20%"><button>add</button></td>
-            </tr>
-      </tbody>
 
-        <tfoot>
-            <tr>
-              <td width="40%"><div class="form-group">
-                  <h4 for="inFile">Input</h4>
-                  <input type="file" id="inFile"></div></td>
-              <td width="40%"><div class="form-group">
-                  <h4 for="outFile">Output</h4>
-                  <input type="file" id="outFile">
-              </div></td>
-              <td width="20%"><button>add</button></td>
-            </tr>
-          </tfoot>
-      </table>
-      <h4>Editorial</h4>
+    <div class="form-group">
+      <h4><b>Problem Explanation</b></h4>
+    <ckeditor   formControlName='pExplanation'  debounce="500"> </ckeditor>
+    <div *ngIf="addProblem.controls['pExplanation'].touched && !addProblem.controls['pExplanation'].valid">  
+      <span *ngIf="addProblem.controls['pExplanation'].hasError('required') ">  
+        <div class="alert alert-warning">
+          <button class="close" type="button" data-dismiss="alert" aria-label="Close"><i class="material-icons">close</i></button>
+          <span>Problem Explanation Required</span>
+        </div>
+      </span>  
+  </div>  
+    </div>
+
+    <table class="example-full-width" cellspacing="0"><tr>
+      <td>
+        <h5>Time Limit</h5>
+      </td>
+      <td><mat-form-field class="example-full-width">
+        <input matInput placeholder="time limit">
+      </mat-form-field></td> <td> in sec </td>
+    </tr></table>
+
+    <table class="example-full-width" cellspacing="0"><tr>
+      <td>
+        <h5>Difficulty Level</h5>
+      </td>
+      <td>
+        <mat-form-field>
+          <mat-select placeholder="Difficulty Level">
+            <mat-option *ngFor="let level of Levels" [value]="level.value">
+              {{ level.viewValue }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </td> 
+    </tr></table>
+
+    
+    <table class="example-full-width" cellspacing="0"><tr>
+      <td>
+        <div class="file-up">  
+        <h4><b>Input/Output File</b></h4>
+        <input type="file" id="inFile"> <p>file should be zip or rar</p></div>
+      </td>
+      <td>
+        <button mat-raised-button> upload </button>
+      </td> 
+    </tr></table>
+
+ <h4>Editorial</h4>
       <ckeditor   formControlName='pEditorial' >    </ckeditor>
       <div *ngIf="addProblem.controls['pEditorial'].touched && !addProblem.controls['pEditorial'].valid">  
         <span *ngIf="addProblem.controls['pEditorial'].hasError('required') ">  
@@ -97,7 +111,7 @@
           </div>
         </span>  
     </div> 
-    </div>
+    
 <div class="row">
     <mat-form-field class="demo-chip-list">
         <mat-chip-list #chipList>
@@ -128,10 +142,7 @@
       </mat-form-field>
     </div>
 <br>
-
-
-
-    <button type="submit" mat-button class="btn btn-success">Submit</button>
+<button type="submit" mat-button class="btn btn-success">Submit</button>
   </form>
   
   

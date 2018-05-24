@@ -5,3 +5,11 @@ td{padding:10px;} th{padding: 10px;}
 .ip{width: 250px;}
 
 div, h4{margin-top: 10px;}
+
+.file-up p{
+font-size:10px;
+margin:10px;
+}
+.file-up h4{
+    margin-bottom: 10px;
+}

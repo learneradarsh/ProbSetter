@@ -1,7 +1,7 @@
 <div class="nav-bar">
   <div class="left-part">
-    <button mat-mini-fab id="nav-left-button"><i class="material-icons" style="font-size:18px;">more_vert</i></button>
     <h4>{{ title }}</h4>
+    <button mat-button routerLink="/qrating" routerLinkActive="router-active">Problem Rating</button>
   </div>
   <div class="right-part">
     <div class="right-part" id="nav-right">
@@ -19,9 +19,11 @@
         <button mat-menu-item>Another Notification</button>
         <button mat-menu-item>Another One</button>
       </mat-menu>
+      <button mat-icon-button (click)="logout()"><i class="material-icons">exit_to_app</i></button>
     </div>
     <div id="menu">
       <button mat-icon-button (click)="menuClick()"><i class="material-icons">menu</i></button>
+
     </div>
   </div>
 </div>

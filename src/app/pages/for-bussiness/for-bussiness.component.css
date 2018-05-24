@@ -162,3 +162,7 @@ box-shadow: #3a8ad5;}
   margin-left: -1.3em; /* same as padding-left set on li */
   width: 1.3em; /* same as padding-left set on li */
 }
+
+.visible {
+  display: none;
+}

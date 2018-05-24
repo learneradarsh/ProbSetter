@@ -7,7 +7,7 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
   styleUrls: ['./for-bussiness.component.css']
 })
 export class ForBussinessComponent implements OnInit {
-
+  hide = false;
   constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
@@ -21,6 +21,9 @@ export class ForBussinessComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
     });
+  }
+  loginBtn() {
+    this.hide = true;
   }
 }
 @Component({

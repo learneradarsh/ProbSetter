@@ -10,8 +10,8 @@
           <div class="wizard-navigation">
             <ul class="nav nav-pills">
               <li class="text-uppercase text-center">Score</li>
-              <li class="text-uppercase text-center">Personal Info</li>
-              <li class="text-uppercase text-center">Redeem</li>
+              <li class="text-uppercase text-center">Account Info</li>
+             
             </ul>
             <div class="move-tab text-center text-uppercase">About</div>
           </div>
@@ -47,31 +47,26 @@
               </div>
             </div>
             <div class="wizard-tab">
-              
                 <form class="example-form">
-                    <table class="example-full-width" cellspacing="0"><tr>
-                      <td><mat-form-field class="example-full-width">
-                        <input matInput placeholder="First name">
-                      </mat-form-field></td>&nbsp;
-                      <td><mat-form-field class="example-full-width">
-                        <input matInput placeholder="Last Name">
-                      </mat-form-field></td>
-                    </tr></table>
-                  
-                    <p>
-                      <mat-form-field class="example-full-width">
-                        <textarea matInput placeholder="Address"></textarea>
-                      </mat-form-field>
-                    </p>
                     <mat-form-field class="example-full-width">
-                        <input matInput placeholder="Phone Number">
+                        <input matInput placeholder="Account Holder Name">
                     </mat-form-field>
-
-                  </form>
+                    <mat-form-field class="example-full-width">
+                      <input matInput placeholder="Account Number">
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                      <input matInput placeholder="Bank Name">
+                    </mat-form-field>
+                   <mat-form-field class="example-full-width">
+                       <input matInput placeholder="IFSC Code">
+                  </mat-form-field>
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Branch">
+               </mat-form-field>
+               <button mat-raised-button color="primary">Proceed</button>
+              </form>
             </div>
-            <div class="wizard-tab">
-              tab 3
-            </div>
+ 
           </div>
           <div class="wizard-footer">
             <button id="preBtn" class="btn btn-danger" (click)="preOnClick()">Previous</button>
