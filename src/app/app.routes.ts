@@ -24,6 +24,8 @@ import { ForBussinessComponent } from './pages/for-bussiness/for-bussiness.compo
 import { VotingComponent } from './pages/voting/voting.component';
 import { QuestionComponent } from './pages/question/question.component';
 import { PlanComponent } from './pages/plan/plan.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { AboutComponent } from './pages/about/about.component';
 const routes: Routes = [
   {path: '', component: MainPageComponent},
   {path: 'login', component: LoginComponent},
@@ -34,6 +36,8 @@ const routes: Routes = [
   {path: 'plan', component: PlanComponent},
   {path: 'adminLogin', component: AdminloginComponent},
   {path: 'adminHome', component: AdminhomeComponent},
+  {path: 'contact', component: ContactComponent},
+  {path: 'about', component: AboutComponent},
   {path: 'question/:data', component: QuestionComponent, data : { data : 'Test Data'}},
   {path: 'dashboard', component: RootComponent, children: [
     {path: '', component: HomeComponent},

@@ -83,6 +83,8 @@ import {
 import { QuestionComponent } from './pages/question/question.component';
 import { AdminloginComponent } from './admin/adminlogin/adminlogin.component';
 import { AdminhomeComponent } from './admin/adminhome/adminhome.component';
+import { AboutComponent } from './pages/about/about.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 
 @NgModule({
@@ -120,7 +122,9 @@ import { AdminhomeComponent } from './admin/adminhome/adminhome.component';
     AdminhomeComponent,
     AdDialogComponent,
     AdProbDialogComponent,
-    AdBussDialogComponent
+    AdBussDialogComponent,
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

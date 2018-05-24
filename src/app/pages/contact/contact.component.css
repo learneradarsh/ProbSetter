@@ -1,25 +1,11 @@
-bg{
-    background: #ffffff;
-    font-size: 10px;
-    font-family: 'Open Sans',sans-serif;
-    font-family: 'Open Sans',sans-serif;
-    word-spacing: 1px;
-}
-body{ background: #ffffff;}
-
-  
-  .container{
-    height: 100%;
+.card{
     position: relative;
-    z-index: 0;
-  }
-  .card{
-    position: relative;
-    padding: 15px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    margin-top: 90px;
+    top: -90px;
     -webkit-animation-name: card;
     -moz-animation-name: card;
     -o-animation-name: card;
@@ -65,7 +51,44 @@ body{ background: #ffffff;}
     margin-bottom: 25px;
     margin-top: 5px;
   }
+  
+  .social-btns i{
+    font-size: 21px;
+    color: #fff;
+  }
+  
+  .social-btns button{
+    margin: 0 8px;
+  }
+  
+  .tip{
+    margin-top: -20px;
+  }
+  
+  .form-row, .card-form, .mat-input-container{
+    width: 100%;
+  }
+  
+  .card-form{
+    padding: 5px;
+  }
+  
+  .form-row{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 13px;
+  }
+  
+  .form-row i{
+    position: relative;
+    top: -5px;
+    margin-right: 15px;
+    color: #555;
+  }
+  
   .card-footer{
+    margin: 10px;
     text-align: center;
   }
   
@@ -73,44 +96,3 @@ body{ background: #ffffff;}
     color: #1960c1;
   }
   
-.card h6, p {
-  color: #999;
-}
-
-.icon{
-  margin-top: 20px;
-  width: 130px;
-  height: 130px;
-  border: 1px solid #e5e5e5;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.icon i{
-  font-size: 55px;
-  color: #e91e63;
-}
-
-.card-title{
-  margin-top: 30px;
-  margin-bottom: 3px;
-}
-
-.title{
-  margin-left:50px;margin-bottom: 50px;
-}
-.discrip{
-  margin-left:50px;
-}
-.btt{ left: 700px;
-  margin-top: 50px;}
-
-  .page-title h5{
-    text-align: center;margin-top: 10px;
-  }
-
-  .disc{
-    margin-top:50px;
-  }

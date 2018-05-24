@@ -1,0 +1,22 @@
+.dark {
+    color: #46535e;
+    font-weight: bolder;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: relative;
+    margin-top: 40px;
+    margin-left: 80px;
+    background-color:transparent;
+  }
+
+  .card-content{
+    position: relative;
+  }
+  
+  .card-title{
+    padding-left: 20px;
+    font-size: 3em;
+  }

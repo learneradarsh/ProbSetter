@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SettingsService } from '../../services/settings.service';
-
+declare const swal: any;
 @Component({
   selector: 'app-settings',
   templateUrl: './settings.component.html',
@@ -32,4 +32,17 @@ export class SettingsComponent implements OnInit {
   bgColorChooseClick(color) {
     this.settingService.setSidebarColor(color);
   }
+
+  change($event) {
+this.openAlert();
+  }
+  openAlert() {
+    swal({
+      title: 'Success!',
+      text: 'Password Change Succesfully!',
+      type: 'success',
+      confirmButtonClass: 'btn btn-success'
+    });
+  }
+
 }

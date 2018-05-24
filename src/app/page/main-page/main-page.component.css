@@ -341,4 +341,25 @@ font-weight: bold;
     transform: translate3d(-16.7%, 0, 0);
   }
 }
+div.gallery {
+    margin-top: 100px;
+  text-align: center;
+   background: transparent;
+    float: left;
+    width: 180px;
+    color: white;
+}
 
+div.gallery img {
+    width: 70px;
+    height: 70px;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+.topProb{
+
+}
