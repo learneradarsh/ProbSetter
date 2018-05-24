@@ -41,7 +41,8 @@ import { DialogComponent } from './pages/for-bussiness/for-bussiness.component';
 import { PlanComponent } from './pages/plan/plan.component';
 import { WalletComponent } from './dashboard/wallet/wallet.component';
 import { VotingComponent } from './pages/voting/voting.component';
-
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 import {MatIcon} from '@angular/material/icon';
 import {
   MatAutocompleteModule,
@@ -164,7 +165,8 @@ import { QuestionComponent } from './pages/question/question.component';
     MatTableModule,
     MatTabsModule,
     MatToolbarModule,
-    MatTooltipModule
+    MatTooltipModule,
+    environment.production ? ServiceWorkerModule.register('ngsw-worker.js') : []
   ],
   providers: [SettingsService],
   bootstrap: [AppComponent],

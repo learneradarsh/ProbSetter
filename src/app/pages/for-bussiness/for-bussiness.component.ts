@@ -1,6 +1,6 @@
 import { Component, OnInit, AfterViewInit, Inject  } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
-
+declare const swal: any;
 @Component({
   selector: 'app-for-bussiness',
   templateUrl: './for-bussiness.component.html',
@@ -8,6 +8,8 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 })
 export class ForBussinessComponent implements OnInit {
   hide = false;
+   UserName: any;
+  Password: any;
   constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
@@ -23,7 +25,29 @@ export class ForBussinessComponent implements OnInit {
     });
   }
   loginBtn() {
-    this.hide = true;
+console.log(this.UserName, this.Password);
+if (this.UserName === 'manish' && this.Password === 'password') {
+  this.hide = true; this.openAlert1()
+} else {
+  this.openAlert();
+}
+
+  }
+
+  openAlert() {
+    swal({
+      title: 'Incorrect Credential',
+      confirmButtonClass: 'btn btn-success'
+    });
+  }
+
+  openAlert1() {
+    swal({
+      title: 'Good job!',
+      text: 'You clicked the button!',
+      type: 'success',
+      confirmButtonClass: 'btn btn-success'
+    });
   }
 }
 @Component({
