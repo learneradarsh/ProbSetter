@@ -11,8 +11,9 @@ import { SweetAlertComponent } from './dashboard/sweetalert/sweetalert.component
 import { SettingsComponent } from './dashboard/settings/settings.component';
 import { PriceTableComponent } from './dashboard/component/pricetable/pricetable.component';
 import { PanelsComponent} from './dashboard/component/panels/panels.component';
+import { AdminloginComponent } from './admin/adminlogin/adminlogin.component';
+import { AdminhomeComponent } from './admin/adminhome/adminhome.component';
 import { WizardComponent } from './dashboard/component/wizard/wizard.component';
-
 import { RootComponent } from './dashboard/root/root.component';
 import { LoginComponent } from './page/login/login.component';
 import { LockComponent } from './page/lock/lock.component';
@@ -31,6 +32,8 @@ const routes: Routes = [
   {path: 'forBussiness', component: ForBussinessComponent},
   {path: 'qrating', component: VotingComponent},
   {path: 'plan', component: PlanComponent},
+  {path: 'adminLogin', component: AdminloginComponent},
+  {path: 'adminHome', component: AdminhomeComponent},
   {path: 'question/:data', component: QuestionComponent, data : { data : 'Test Data'}},
   {path: 'dashboard', component: RootComponent, children: [
     {path: '', component: HomeComponent},

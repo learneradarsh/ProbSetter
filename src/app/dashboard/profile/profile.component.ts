@@ -15,6 +15,10 @@ export class ProfileComponent implements OnInit {
   ngOnInit() {
     this.firstName = 'Alec';
     this.lastName = 'Thompson';
+           $(document).ready(function() {
+        $('#myForm :input').prop('disabled', true);
+        $('#submit').prop('disabled', false);
+    });
   }
 
 
@@ -24,8 +28,16 @@ export class ProfileComponent implements OnInit {
 
     if (this.Edit) {
        this.buttonName = 'Update';
+       $(document).ready(function() {
+        $('#myForm :input').prop('disabled', false);
+        $('#submit').prop('disabled', false);
+    });
     } else {
             this.buttonName = 'Edit';
+            $(document).ready(function() {
+              $('#myForm :input').prop('disabled', true);
+              $('#submit').prop('disabled', false);
+          });
       }
   }
 

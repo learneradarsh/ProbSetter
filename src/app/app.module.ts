@@ -36,7 +36,7 @@ import { AddProblemComponent } from './dashboard/add-problem/add-problem.compone
 import { MainPageComponent } from './page/main-page/main-page.component';
 import { ForBussinessComponent } from './pages/for-bussiness/for-bussiness.component';
 import { SwiperModule } from 'angular2-useful-swiper';
-
+import { AdDialogComponent } from './admin/adminlogin/adminlogin.component';
 import { DialogComponent } from './pages/for-bussiness/for-bussiness.component';
 import { PlanComponent } from './pages/plan/plan.component';
 import { WalletComponent } from './dashboard/wallet/wallet.component';
@@ -44,6 +44,8 @@ import { VotingComponent } from './pages/voting/voting.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import {MatIcon} from '@angular/material/icon';
+import { AdProbDialogComponent } from './page/login/login.component';
+import {AdBussDialogComponent} from './pages/for-bussiness/for-bussiness.component';
 import {
   MatAutocompleteModule,
   MatButtonModule,
@@ -79,6 +81,8 @@ import {
   MatTooltipModule,
 } from '@angular/material';
 import { QuestionComponent } from './pages/question/question.component';
+import { AdminloginComponent } from './admin/adminlogin/adminlogin.component';
+import { AdminhomeComponent } from './admin/adminhome/adminhome.component';
 
 
 @NgModule({
@@ -111,7 +115,12 @@ import { QuestionComponent } from './pages/question/question.component';
     PlanComponent,
     WalletComponent,
     VotingComponent,
-    QuestionComponent
+    QuestionComponent,
+    AdminloginComponent,
+    AdminhomeComponent,
+    AdDialogComponent,
+    AdProbDialogComponent,
+    AdBussDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -171,7 +180,10 @@ import { QuestionComponent } from './pages/question/question.component';
   providers: [SettingsService],
   bootstrap: [AppComponent],
   entryComponents: [
-    DialogComponent
+    DialogComponent,
+    AdDialogComponent,
+    AdProbDialogComponent,
+    AdBussDialogComponent
   ]
 })
 export class AppModule { }

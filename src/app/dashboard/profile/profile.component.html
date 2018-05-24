@@ -7,7 +7,7 @@
           <i class="material-icons">perm_identity</i>
         </div>
         <div class="card-content">
-          <form >
+          <form id="myForm">
             <div class="row">
               <div class="col-md-6">
                 <mat-input-container color="accent">
@@ -53,7 +53,7 @@
               </div>
             </div>
             <div class="row action-btn">
-              <button md-raised-button type="submit" class="btn btn-rose" (click)="toggle()" > {{buttonName}}<!--  --></button>
+              <button md-raised-button type="submit" id="submit" class="btn btn-rose" (click)="toggle()" > {{buttonName}}<!--  --></button>
             </div>
           </form>
         </div>

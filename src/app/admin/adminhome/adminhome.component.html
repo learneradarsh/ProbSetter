@@ -1,0 +1,95 @@
+<div class="container">
+    <div class="row">
+      <app-header></app-header>
+    </div>
+
+
+<div  class="col-sm-9 mr">
+    
+    <div class="col-xs-3"> <!-- required for floating -->
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs tabs-left sideways">
+        <li class="active"><a href="#home-v" data-toggle="tab">Problem Review</a></li>
+        <li><a href="#profile-v" data-toggle="tab">Payment mode Review</a></li>
+      </ul>
+    </div>
+
+    <div class="col-xs-9">
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div class="tab-pane active" id="home-v">
+            <div class="card">
+                <div class="card-header">
+                  <i class="material-icons">assignment</i>
+                </div>
+                <div class="card-content">
+                  <h4 class="card-title">Question Review</h4>
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead class="text-primary">
+                        <tr>
+                          <th>Sno.</th>
+                          <th>Problem ID</th>
+                          <th>Problem Name</th>
+                          <th>Verify</th>
+                          <th>Reject</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>123</td>
+                          <td>Cake walk</td>
+                          <td>  <button mat-button (click)="qverify()">Verify</button> </td>
+                          <td>  <button mat-button (click)="qreject()">Reject</button> </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="tab-pane" id="profile-v">
+          
+            <div class="card">
+                <div class="card-content">
+                  <h4 class="card-title">Payment Review</h4>
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead class="text-primary">
+                        <tr>
+                          <th>Sno.</th>
+                          <th>Payment Id</th>
+                          <th>Name</th>
+                          <th>Money</th>
+                          <th>Verify</th>
+                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>123</td>
+                          <td>Cake walk</td>
+                          <td>$50</td>
+                          <td>  <button mat-button (click)="pverify()">Verify</button> </td>
+                          
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+  </div>
+</div>
+  

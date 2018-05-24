@@ -24,6 +24,17 @@ export class ForBussinessComponent implements OnInit {
       console.log('The dialog was closed');
     });
   }
+
+  openDialog1(): void {
+    const dialogRef = this.dialog.open(AdBussDialogComponent, {
+      height: '200px',
+      width: '300px',
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
   loginBtn() {
 console.log(this.UserName, this.Password);
 if (this.UserName === 'manish' && this.Password === 'password') {
@@ -43,8 +54,8 @@ if (this.UserName === 'manish' && this.Password === 'password') {
 
   openAlert1() {
     swal({
-      title: 'Good job!',
-      text: 'You clicked the button!',
+      title: 'Success!',
+      text: 'You are now logged In!',
       type: 'success',
       confirmButtonClass: 'btn btn-success'
     });
@@ -65,4 +76,31 @@ export class DialogComponent {
     this.dialogRef.close();
   }
 
+}
+@Component({
+  selector: 'app-dialog',
+  templateUrl: './adforget.html',
+  styles: [' ' ]
+})
+export class AdBussDialogComponent {
+
+  constructor(
+    public dialogRef: MatDialogRef<AdBussDialogComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any) { }
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+  forget() {
+    this.openAlert1();
+  }
+  openAlert1() {
+    swal({
+      title: 'Success!',
+      text: 'Link Send to Your Email!',
+      type: 'success',
+      confirmButtonClass: 'btn btn-success'
+    });
+    this.dialogRef.close();
+  }
 }
